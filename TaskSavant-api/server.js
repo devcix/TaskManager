@@ -9,9 +9,9 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const tasks = [
-  { id: 0, name: 'Task 1', assignedTo: 'John Doe', dueDate: '2023-10-10', completed: false, description: "Block of information about the task!!!" },
-  { id: 1, name: 'Task 2', assignedTo: 'Jane Deer', dueDate: '2023-10-15', completed: true, description: "Block of information about the task!!!" },  
-  { id: 2, name: 'Show Amy Code', assignedTo: 'Cixtian Trybe', dueDate: '2023-10-15', completed: true, description: "Block of information about the task!!!" },  
+  { name: 'Task 1', assignedTo: 'John Doe', dueDate: '2023-10-10', completed: false, description: "Block of information about the task!!!",  id: 0 },
+  { name: 'Task 2', assignedTo: 'Jane Deer', dueDate: '2023-10-15', completed: true, description: "Block of information about the task!!!" ,  id: 1 },  
+  { name: 'Show Amy Code', assignedTo: 'Cixtian Trybe', dueDate: '2023-10-15', completed: true, description: "Block of information about the task!!!",  id: 2  },  
 ];
 
 app.get('/api/tasks', (req, res) => {
@@ -27,6 +27,8 @@ app.get('/api/tasks/:id', (req, res) => {
     res.status(404).json({ error: 'Task not found' });
   }
 });
+
+
 
 app.post('/api/tasks', (req, res) => {
   const newTask = req.body;
