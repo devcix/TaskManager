@@ -1,27 +1,39 @@
 # TaskSavant
 
+This is a demo project, designed as a basic show of the developers skill in developing angular applications.  It represents arund 8 hours of
+development time, and includes basic and simple Angular methodologies, and practices.  It in no way boast the best practices outside of basic
+principals of development, including, but not limited to Component, and Services development, and API concumption.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
 
-## Development server
+## Serving the project
+Simply clone the entire TaskManager repository to your local environment.
+Run npm install to download all neccessary dependencies.
+cd into the TaskSavant-api directory and run the following command
+  'node server.js'
+cd into the TaskSavant directory and run the following command
+  'ng serve'
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The project will launch at the url 'http://localhost:4200'
 
-## Code scaffolding
+## Notes and next development ideas
+Note that this is a project put together with little forewarning, or prepairation, and is done simply to show that the developer
+as a pretty solid grasp of concepts and ideas behind coding and designing a proper angular app.  This is said to also note
+that there are still things the developer knows he has to learn, and many tricks and techniuqes that would serve to make him
+an even better developer.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+As it stands now the project is a simple list server, serving a predefined list of items representing task.  It's very basic
+in it's structure, and there are a great many bells and whistlse that might be added at a later time.  Some of these ideas follow:
 
-## Build
+* Date/Time picker
+* Registration/authentication system
+* Database integration for
+* * Users / Administration
+  * Login and security
+  * Projects (Expanding the scope of the projects)
+  * document upload and display
+* Integrating Material, or other aestetics libraries
+* Email communications systems
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
