@@ -1,0 +1,49 @@
+<div class="container">
+    <h1>Task List</h1>
+    <div>
+        <span class="name"><label>Task Name:</label></span>
+        <span class="dueDate"><label>DueDate:</label></span>
+        <span class="assignedTo"><label>Assigned To:</label></span>
+        <span class="controls"><label>Controls:</label></span>
+    </div>
+
+    <div class="task-row" *ngFor="let task of tasks">
+        <div *ngIf="editableRow === task.id; then editableRowContent else viewRow"></div>        
+        <ng-template #viewRow (click)="viewTask(task.id)">
+            <span class="name">{{ task.name }}</span>
+            <span class="dueDate">{{ task.dueDate }}</span>
+            <span class="assignedTo">{{ task.assignedTo }}</span>
+            <button (click)="editTask(task.id)">Edit</button>    
+            <button>Delete</button>
+        </ng-template>
+        <ng-template #editableRowContent>
+        <form [formGroup]="newTaskForm" (ngSubmit)="updateTask()">
+            <div>
+                <span class="name"><input type="text" formControlName="name" placeholder="{{task.name}}" class="text"></span>
+                <span class="dueDate"><input type="text" formControlName="dueDate"  placeholder="{{task.dueDate}}" class="text"></span>
+                <span class="assignedTo"><input type="text" formControlName="assignedTo"  placeholder="{{task.assignedTo}}" class="text"></span>
+                <br />
+                <textarea style="width: 617px; margin-top: 5px; margin-left: 20px;" formControlName="description">{{task.description}}</textarea>
+            </div>
+            <button (click)="editTask(task.id)">Save</button>    
+            <button (click)="cancelEdit()">Cancel</button>
+        </form>
+        </ng-template>                  
+    </div>        
+    <hr>
+    <h2>Add New Task</h2>
+    <div style="display: flex;">
+        <form [formGroup]="newTaskForm" (ngSubmit)="addTask()">
+            <div>
+                <span class="name"><input type="text" id="taskName" formControlName="name" name="name" placeholder="Task Name" class="text"></span>
+                <span class="dueDate"><input type="text" id="dueDate" formControlName="dueDate" name="dueDate" placeholder="Due Date" class="text"></span>
+                <span class="assignedTo"><input type="text" id="assignedTo" formControlName="assignedTo" name="dueDate" placeholder="Assigned To" class="text"></span>                
+                <br />
+                <textarea style="width: 617px; margin-top: 5px; margin-left: 20px;"  formControlName="description"></textarea>
+                
+            </div>
+            <button type="submit">Add</button>    
+            <button (click)="cancelEdit()">Cancel</button>
+        </form>
+    </div>
+</div>

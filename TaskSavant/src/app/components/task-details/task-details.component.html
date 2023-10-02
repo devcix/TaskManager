@@ -1,0 +1,12 @@
+<h2>Task Details</h2>
+
+<div *ngIf="task">
+    
+  <p><strong>Name:</strong> {{ task.name }}</p>
+  <p><strong>Status:</strong> {{ task.completed ? 'Completed' : 'Incomplete' }}</p>
+  <p *ngIf="task.dueDate"><strong>Due Date:</strong> {{ task.dueDate | date:'medium' }}</p>
+
+</div>
+<div *ngIf="!task">
+    <p>Task not found</p>
+</div>

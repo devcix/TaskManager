@@ -1,0 +1,97 @@
+.container {
+    border: 1px solid black;
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+
+    
+    .name {
+        display: inline-block;
+        text-align: center;
+        padding: 0 10px;
+        width: 200px;
+        label {
+            font-weight: bold;
+            color: red;
+            
+        }
+    }
+    .dueDate{
+        display: inline-block;
+        text-align: center;
+        padding: 0 10px;
+        width: 200px;
+        label {
+            font-weight: bold;
+            color: red;
+            
+        }
+    }
+    .assignedTo{
+        display: inline-block;
+        text-align: center;
+        padding: 0 10px;
+        width: 200px;
+        label {
+            font-weight: bold;
+            color: red;
+            
+        }
+    }
+    .controls{
+        display: inline-block;
+        text-align: center;
+        padding: 0 10px;
+        width: 200px;
+        label {
+            font-weight: bold;
+            color: red;
+            
+        }
+    }
+
+    .task-row{
+        display: flex;
+        border: 1px solid #a1a1a1;
+        padding: 5px;
+        margin-bottom: 5px;
+        .name {
+            display: inline-block;
+            text-align: center;
+            padding: 0 10px;
+            width: 200px;
+            label {
+                font-weight: bold;
+                color: red;
+                
+            }
+        }
+        .dueDate{
+            display: inline-block;
+            text-align: center;
+            padding: 0 10px;
+            width: 200px;
+            label {
+                font-weight: bold;
+                color: red;
+                
+            }
+        }
+        .assignedTo{
+            display: inline-block;
+            text-align: center;
+            padding: 0 10px;
+            width: 200px;
+            label {
+                font-weight: bold;
+                color: red;
+                
+            }
+        }
+        button{
+            border-radius: 15px;     
+            width: 100px;
+        }    
+    }
+    
+}
